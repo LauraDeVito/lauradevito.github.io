@@ -40,7 +40,6 @@
     padding: 0 28px;
   }
 
-  /* Header */
   header.site {
     display: flex;
     justify-content: space-between;
@@ -69,7 +68,6 @@
     color: var(--ink);
   }
 
-  /* Hero */
   .hero {
     background: var(--ink);
     color: #e8f0f3;
@@ -155,6 +153,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: flex-start;
   }
 
   .pill {
@@ -170,7 +169,6 @@
   .pill.briefs   { color: #f0dba8; border-color: #a07830; background: rgba(196,146,74,0.16); }
   .pill.toolkits { color: #c8dde3; border-color: #3a6878; background: rgba(74,124,138,0.12); }
 
-  /* Series intro */
   .series-intro {
     padding: 56px 0 8px;
   }
@@ -196,7 +194,6 @@
     color: var(--ink-soft);
   }
 
-  /* Theme tags */
   .theme-tags {
     display: flex;
     flex-wrap: wrap;
@@ -216,7 +213,6 @@
     background: var(--teal-soft);
   }
 
-  /* Brief cards */
   .briefs {
     padding: 36px 0 80px;
     display: flex;
@@ -307,7 +303,6 @@
     border-style: dashed;
   }
 
-  /* Footer */
   footer {
     border-top: 1px solid var(--parchment-line);
     padding: 28px 0;
@@ -349,9 +344,9 @@
       <a href="https://orcid.org/0000-0001-9196-4013">ORCID 0000-0001-9196-4013</a>
     </p>
     <div class="pill-row">
-      <a href="#about" class="pill about">About</a>
-      <a href="#about" class="pill briefs">Policy Briefs</a>
-      <a href="#about" class="pill toolkits">Toolkits</a>
+      <a href="#about" class="pill about">Just Transition</a>
+      <a href="#about" class="pill briefs">Nature-Based Solutions</a>
+      <a href="#about" class="pill toolkits">Climate Adaptation</a>
     </div>
   </div>
 </section>
@@ -374,6 +369,11 @@
 </section>
 
 <section class="briefs wrap">
+
+  <div style="display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap; align-items:flex-start;">
+    <span style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; padding:6px 14px; border-radius:999px; border:1px solid #e4dccb; color:#6b7280; background:#ffffff;">Policy Briefs</span>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.06em; text-transform:uppercase; padding:6px 14px; border-radius:999px; border:1px solid #e4dccb; color:#6b7280; background:#ffffff;">Toolkits</span>
+  </div>
 
   <article class="brief-card draft">
     <div class="stamp">SOON</div>
