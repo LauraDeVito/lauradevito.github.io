@@ -138,8 +138,13 @@
   .byline a { text-decoration: underline; color: #b9c9bf; }
 
   .pill-row {
-    display: block;
-    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
   }
 
   .pill {
@@ -149,11 +154,15 @@
     border-radius: 999px;
     border: 1px solid;
     text-decoration: none;
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    line-height: 1.4;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+    min-height: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    align-self: flex-start;
+    line-height: 1;
   }
 
   .pill.briefs   { color: #f0dba8; border-color: #8a6526; background: rgba(168,119,47,0.16); }
