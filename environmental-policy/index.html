@@ -10,15 +10,12 @@
 <style>
   :root {
     --ink: #1a2218;
-    --ink-soft: #2e3d2c;
     --parchment: #faf6ef;
     --parchment-line: #e4dccb;
     --card-bg: #ffffff;
     --teal: #6aaba0;
     --teal-dark: #4a8078;
-    --teal-soft: #daeaed;
     --amber: #c4924a;
-    --amber-soft: #f5ead8;
     --rust: #9a4f3a;
     --muted: #6b7280;
   }
@@ -110,114 +107,47 @@
   .hero h1 {
     font-family: 'Newsreader', serif;
     font-weight: 600;
-    font-size: clamp(2rem, 5vw, 2.9rem);
-    line-height: 1.12;
-    margin-bottom: 6px;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    margin-bottom: 8px;
     color: #eef2e8;
   }
 
   .hero .subtitle {
     font-family: 'Newsreader', serif;
     font-style: normal;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.25rem;
     color: #a8c8b8;
-    margin-top: -8px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   .hero .question {
     font-family: 'Newsreader', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1.2rem, 3vw, 1.65rem);
     color: var(--teal);
-    margin: 6px 0 22px;
+    margin-bottom: 22px;
     line-height: 1.3;
   }
 
   .hero p.lede {
-    max-width: 60ch;
+    max-width: 62ch;
     color: #b8ccc0;
-    font-size: 1.02rem;
+    font-size: 1rem;
     margin-bottom: 28px;
+    line-height: 1.65;
   }
 
   .byline {
     font-size: 0.88rem;
     color: #8aaa98;
-    margin-bottom: 26px;
   }
 
   .byline a { text-decoration: underline; color: var(--teal); }
 
-  .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .pill {
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 9px 16px;
-    border-radius: 999px;
-    border: 1px solid;
-    text-decoration: none;
-    display: inline-block;
-    width: auto;
-  }
-
-  .pill.jt  { color: #b8e0d8; border-color: #4a8078; background: rgba(106,171,160,0.15); }
-  .pill.nbs { color: #d4e8a8; border-color: #6a8a48; background: rgba(140,180,80,0.13); }
-  .pill.ca  { color: #f0dba8; border-color: #a07830; background: rgba(196,146,74,0.14); }
-
-  .theme-section {
-    padding: 52px 0 16px;
-    border-top: 1px solid var(--parchment-line);
-    margin-top: 40px;
-  }
-
-  .theme-section:first-of-type {
-    margin-top: 0;
-    border-top: none;
-  }
-
-  .theme-header {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    margin-bottom: 8px;
-  }
-
-  .theme-header h2 {
-    font-family: 'Newsreader', serif;
-    font-weight: 600;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-  }
-
-  .theme-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-bottom: 2px;
-  }
-
-  .theme-dot.jt  { background: var(--teal); }
-  .theme-dot.nbs { background: #8cb450; }
-  .theme-dot.ca  { background: var(--amber); }
-
-  .theme-desc {
-    max-width: 68ch;
-    color: #3a4256;
-    font-size: 0.96rem;
-    margin-bottom: 28px;
-  }
-
-  .series-intro {
-    padding: 52px 0 8px;
-  }
+  .series-intro { padding: 52px 0 8px; }
 
   .section-label {
     font-family: 'JetBrains Mono', monospace;
@@ -228,23 +158,50 @@
     margin-bottom: 14px;
   }
 
-  .series-intro h2 {
-    font-family: 'Newsreader', serif;
-    font-weight: 600;
-    font-size: clamp(1.6rem, 3.4vw, 2.1rem);
-    margin-bottom: 16px;
+  .series-intro p { max-width: 68ch; color: #3a4256; }
+
+  .theme-section {
+    padding: 48px 0 16px;
+    border-top: 1px solid var(--parchment-line);
+    margin-top: 36px;
   }
 
-  .series-intro p {
+  .theme-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .theme-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .theme-dot.jt  { background: var(--teal); }
+  .theme-dot.nbs { background: #8cb450; }
+  .theme-dot.ca  { background: var(--amber); }
+
+  .theme-header h2 {
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .theme-desc {
     max-width: 68ch;
     color: #3a4256;
+    font-size: 0.96rem;
+    margin-bottom: 24px;
   }
 
   .briefs {
-    padding: 20px 0 52px;
     display: flex;
     flex-direction: column;
     gap: 18px;
+    padding-bottom: 20px;
   }
 
   .brief-card {
@@ -313,17 +270,8 @@
     margin-bottom: 8px;
   }
 
-  .brief-card p.desc {
-    color: #3a4256;
-    font-size: 0.94rem;
-    margin-bottom: 8px;
-  }
-
-  .brief-card p.supp {
-    font-style: italic;
-    font-size: 0.84rem;
-    color: var(--muted);
-  }
+  .brief-card p.desc { color: #3a4256; font-size: 0.94rem; margin-bottom: 8px; }
+  .brief-card p.supp { font-style: italic; font-size: 0.84rem; color: var(--muted); }
 
   .dl-btn {
     align-self: start;
@@ -348,6 +296,7 @@
   footer {
     border-top: 1px solid var(--parchment-line);
     padding: 28px 0;
+    margin-top: 52px;
     font-size: 0.85rem;
     color: var(--muted);
   }
@@ -363,31 +312,26 @@
 
 <header class="site wrap">
   <div class="brand"><a href="/">Dr Laura De Vito</a></div>
-  <nav class="pill"><a href="/">Back to Site</a></nav>
+  <nav class="pill"><a href="/research-series/">Research Series</a></nav>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">CENTRE FOR ENVIRONMENT, SOCIETY AND RESILIENCE · UWE BRISTOL</div>
+    <div class="eyebrow">TACKLING ENVIRONMENTAL CHALLENGES THROUGH PUBLIC POLICY · CENTRE FOR ENVIRONMENT, SOCIETY AND RESILIENCE</div>
     <h1>Environmental Policy</h1>
     <p class="subtitle">Research Series</p>
     <p class="question">who shapes the response to environmental challenges, and why does the gap between ambition and outcomes persist?</p>
     <p class="lede">
-      This series brings together policy briefs and practical outputs on just transition,
-      nature-based solutions and climate adaptation. It sits outside the peer-review process,
-      aimed at practitioners, local authorities and communities navigating the gap between
-      environmental policy commitments and what is actually deliverable on the ground.
+      A research series on environmental policy and governance: how challenges are framed,
+      how responses are designed, and why the gap between ambition and outcomes persists.
+      Aimed at policymakers, local authorities and civil society organisations engaged
+      with environmental governance.
     </p>
     <p class="byline">
       Dr Laura De Vito · UWE Bristol, 2026 ·
       <a href="https://www.linkedin.com/in/devitolaura/">LinkedIn</a> ·
       <a href="https://orcid.org/0000-0001-9196-4013">ORCID 0000-0001-9196-4013</a>
     </p>
-    <div class="pill-row">
-      <a href="#just-transition" class="pill jt">Just Transition</a>
-      <a href="#nature-based-solutions" class="pill nbs">Nature-Based Solutions</a>
-      <a href="#climate-adaptation" class="pill ca">Climate Adaptation</a>
-    </div>
   </div>
 </section>
 
@@ -398,8 +342,8 @@
     <p>
       This page hosts short-form, non-peer-reviewed outputs, policy briefs and practical
       toolkits, developed alongside ongoing research into environmental policy and governance.
-      Content is added as briefs are finalised. Get in touch via LinkedIn if you would like
-      early access to a specific piece of work.
+      The series covers three interconnected themes. Content is added as briefs are finalised.
+      Get in touch via LinkedIn if you would like early access to a specific piece of work.
     </p>
   </section>
 
