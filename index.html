@@ -15,11 +15,7 @@
     --parchment-line: #e4dccb;
     --card-bg: #ffffff;
     --sage: #5b7a6a;
-    --sage-soft: #e7eee9;
     --mustard: #a8772f;
-    --mustard-soft: #f3e9d6;
-    --rust: #9a4f3a;
-    --rust-soft: #f3e3dd;
     --muted: #6b7280;
   }
 
@@ -105,89 +101,7 @@
     margin-bottom: 14px;
   }
 
-  .series-section {
-    margin-bottom: 56px;
-  }
-
-  .series-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
-  }
-
-  .series-callout {
-    border-radius: 10px;
-    padding: 26px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-
-  .series-callout.env { background: #2d4a35; }
-  .series-callout.sf  { background: var(--ink); }
-
-  .series-callout .label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-
-  .series-callout.env .label { color: #a8c89a; }
-  .series-callout.sf .label  { color: #9fc0ad; }
-
-  .series-callout h3 {
-    font-family: 'Newsreader', serif;
-    font-weight: 600;
-    font-size: 1.25rem;
-  }
-
-  .series-callout.env h3 { color: #eef2e8; }
-  .series-callout.sf h3  { color: #ece7da; }
-
-  .series-callout p {
-    font-size: 0.92rem;
-    margin-top: 4px;
-    max-width: 46ch;
-  }
-
-  .series-callout.env p { color: #c8d8b8; }
-  .series-callout.sf p  { color: #cfd2dc; }
-
-  .series-callout a.cta {
-    display: inline-block;
-    width: auto;
-    align-self: flex-start;
-    flex-shrink: 0;
-    font-size: 0.88rem;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 999px;
-    white-space: nowrap;
-    border: 1px solid;
-  }
-
-  .series-callout.env a.cta {
-    color: #d4e8a8;
-    border-color: #4a6e38;
-    background: rgba(74,110,56,0.22);
-  }
-
-  .series-callout.sf a.cta {
-    color: #cfe4d8;
-    border-color: #4d6a5c;
-    background: rgba(91,122,106,0.18);
-  }
-
-  section.block { padding-bottom: 52px; }
+  .series-section { padding-bottom: 56px; }
 
   .section-label {
     font-family: 'JetBrains Mono', monospace;
@@ -197,6 +111,78 @@
     color: var(--muted);
     margin-bottom: 14px;
   }
+
+  .series-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .series-card {
+    border-radius: 10px;
+    padding: 26px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .series-card.env { background: #1a2218; }
+  .series-card.sf  { background: #1c2333; }
+
+  .card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .series-card.env .card-label { color: #6aaba0; }
+  .series-card.sf .card-label  { color: #9fc0ad; }
+
+  .series-card h3 {
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .series-card.env h3 { color: #eef2e8; }
+  .series-card.sf h3  { color: #ece7da; }
+
+  .series-card p.desc { font-size: 0.92rem; max-width: 46ch; }
+
+  .series-card.env p.desc { color: #a8c8b8; }
+  .series-card.sf p.desc  { color: #cfd2dc; }
+
+  .series-card a.cta {
+    flex-shrink: 0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    white-space: nowrap;
+    border: 1px solid;
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  .series-card.env a.cta {
+    color: #b8e0d8;
+    border-color: #4a8078;
+    background: rgba(106,171,160,0.15);
+  }
+
+  .series-card.sf a.cta {
+    color: #cfe4d8;
+    border-color: #4d6a5c;
+    background: rgba(91,122,106,0.18);
+  }
+
+  section.block { padding-bottom: 52px; }
 
   section.block h2 {
     font-family: 'Newsreader', serif;
@@ -227,10 +213,7 @@
     margin-bottom: 4px;
   }
 
-  .cv-entry p {
-    color: var(--ink-soft);
-    font-size: 0.92rem;
-  }
+  .cv-entry p { color: var(--ink-soft); font-size: 0.92rem; }
 
   .cv-subgroup-label {
     font-family: 'JetBrains Mono', monospace;
@@ -257,16 +240,9 @@
     margin-right: 8px;
   }
 
-  .pub-item a {
-    text-decoration: underline;
-    color: var(--ink);
-  }
+  .pub-item a { text-decoration: underline; color: var(--ink); }
 
-  .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
+  .contact-grid { display: flex; flex-wrap: wrap; gap: 14px; }
 
   .contact-pill {
     font-size: 0.88rem;
@@ -287,14 +263,8 @@
   }
 
   @media (max-width: 600px) {
-    .intro {
-      grid-template-columns: 1fr;
-      justify-items: start;
-    }
-    .cv-entry {
-      grid-template-columns: 1fr;
-      gap: 4px;
-    }
+    .intro { grid-template-columns: 1fr; justify-items: start; }
+    .cv-entry { grid-template-columns: 1fr; gap: 4px; }
   }
 </style>
 </head>
@@ -306,8 +276,7 @@
     <a href="#cv">CV</a>
     <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
-    <a href="/environmental-policy/">Env Policy</a>
-    <a href="/sf-series/">SF-Series</a>
+    <a href="#research-series">Research Series</a>
   </nav>
 </header>
 
@@ -320,38 +289,44 @@
       <h1>Dr Laura De Vito</h1>
       <p class="role">Senior Research Fellow in Environmental Policy</p>
       <p class="bio">
-        I am a political scientist working on environmental policy and public administration,
-        with two connected strands of research: how EU and national governments implement environmental policy,
-        and how strategic foresight can support longer-term, more resilient policymaking.
+        I am a political scientist working on two connected strands of research:
+        how EU, national and local governments implement
+        environmental policy, and how strategic foresight can support longer-term, more
+        resilient policymaking.
       </p>
       <p class="bio">
-        I'm a Senior Research Fellow at the Centre for Environment, Society and Resilience, UWE Bristol.
-        My current and recent work includes an ESRC Policy Fellowship with the Welsh Government on sustainable futures,
-        research on air quality and citizen science, place-based industrial decarbonisation and just transition, nature-based solutions and advisory roles with the Bristol Advisory Committee on Climate Change
-        and I chair the Scientific Board of Foundation Italian Futures Institute.
+        I am a Senior Research Fellow at the Centre for Environment, Society and Resilience,
+        UWE Bristol. My current and recent work includes an ESRC Policy Fellowship with the
+        Welsh Government on sustainable futures, research on air quality and citizen science,
+        place-based industrial decarbonisation and just transition, nature-based solutions,
+        and advisory roles with the Bristol Advisory Committee on Climate Change. I chair
+        the Scientific Board of the Foundation Italian Futures Institute.
       </p>
     </div>
   </section>
 
-  <div class="series-section">
-    <div class="series-label">Research Series</div>
+  <div class="series-section" id="research-series">
+    <div class="section-label">Research Series</div>
+    <div class="series-cards">
 
-    <div class="series-callout env">
-      <div>
-        <div class="label">Environmental Policy Series</div>
-        <h3>Environmental Policy</h3>
-        <p>Policy briefs and toolkits on just transition, nature-based solutions and climate adaptation.</p>
+      <div class="series-card env">
+        <div>
+          <div class="card-label">Policy Briefs · Toolkits</div>
+          <h3>Environmental Policy</h3>
+          <p class="desc">Tackling environmental challenges through public policy</p>
+        </div>
+        <a href="/environmental-policy/" class="cta">View the Series →</a>
       </div>
-      <a href="/environmental-policy/" class="cta">View the Series →</a>
-    </div>
 
-    <div class="series-callout sf">
-      <div>
-        <div class="label">SF-Series · Strategic Foresight</div>
-        <h3>Strategic Foresight and Public Policy</h3>
-        <p>Policy briefs and toolkits developed outside the peer-review process, alongside ongoing research.</p>
+      <div class="series-card sf">
+        <div>
+          <div class="card-label">Policy Briefs · Toolkits</div>
+          <h3>Strategic Foresight and Public Policy</h3>
+          <p class="desc">Embedding long-term thinking in public policy</p>
+        </div>
+        <a href="/sf-series/" class="cta">View the Series →</a>
       </div>
-      <a href="/sf-series/" class="cta">View the Series →</a>
+
     </div>
   </div>
 
@@ -428,7 +403,7 @@
 </main>
 
 <footer class="wrap">
-  Dr Laura De Vito · UWE Bristol · Last updated 2 July 2026
+  Dr Laura De Vito · UWE Bristol · Last updated 3 July 2026
 </footer>
 
 </body>
